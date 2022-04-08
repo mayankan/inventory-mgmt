@@ -1,0 +1,53 @@
+{
+    "Pulses": [
+        {
+            "name": "Groundnuts",
+            "price": 200,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Peanuts",
+            "price": 100,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Green peas",
+            "price": 150,
+            "weight": "10kgs"
+        }
+    ],
+    "Rice": [
+        {
+            "name": "Sharbati",
+            "price": 1000,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Basmati",
+            "price": 1500,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Ankur",
+            "price": 500,
+            "weight": "10kgs"
+        }
+    ],
+    "Wheat": [
+        {
+            "name": "Rahet",
+            "price": 100,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Karet",
+            "price": 200,
+            "weight": "10kgs"
+        },
+        {
+            "name": "Shahet",
+            "price": 300,
+            "weight": "10kgs"
+        }
+    ]
+}
