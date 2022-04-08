@@ -11,55 +11,63 @@ import json
 
 
 def create_inventory():
+    """
+    Description: 
+        Create Dictionary with list values containing name, weight and price per kg of Inventory values.
+    Parameter:
+        None.
+    Return:
+        Inventory Dictionary with list values containing name, weight and price per kg of Rice, Pulses and Wheat inventory.
+    """
     inventory = {'Rice': []}
     inventory['Rice'].append({
         'name': 'Sharbati',
-        'weight': '10kgs',
-        'price': 1000
+        'weight_kg': 10,
+        'price_per_kg': 1000
     })
     inventory['Rice'].append({
         'name': 'Basmati',
-        'weight': '10kgs',
-        'price': 1500
+        'weight_kg': 10,
+        'price_per_kg': 1500
     })
     inventory['Rice'].append({
         'name': 'Ankur',
-        'weight': '10kgs',
-        'price': 500
+        'weight_kg': 10,
+        'price_per_kg': 500
     })
 
     inventory['Pulses'] = []
     inventory['Pulses'].append({
         'name': 'Groundnuts',
-        'weight': '10kgs',
-        'price': 200
+        'weight_kg': 10,
+        'price_per_kg': 200
     })
     inventory['Pulses'].append({
         'name': 'Peanuts',
-        'weight': '10kgs',
-        'price': 100
+        'weight_kg': 10,
+        'price_per_kg': 100
     })
     inventory['Pulses'].append({
         'name': 'Green peas',
-        'weight': '10kgs',
-        'price': 150
+        'weight_kg': 10,
+        'price_per_kg': 150
     })
 
     inventory['Wheat'] = []
     inventory['Wheat'].append({
         'name': 'Rahet',
-        'weight': '10kgs',
-        'price': 100
+        'weight_kg': 10,
+        'price_per_kg': 100
     })
     inventory['Wheat'].append({
         'name': 'Karet',
-        'weight': '10kgs',
-        'price': 200
+        'weight_kg': 10,
+        'price_per_kg': 200
     })
     inventory['Wheat'].append({
         'name': 'Shahet',
-        'weight': '10kgs',
-        'price': 300
+        'weight_kg': 10,
+        'price_per_kg': 300
     })
     return inventory
 
@@ -77,7 +85,7 @@ def read_json(file_name):
         for inventory_cat in range(len(inventory_list)):
             total_amt = 0
             for each_inventory in inventory_data[inventory_list[inventory_cat]]:
-                total_amt = total_amt + each_inventory['price']
+                total_amt = total_amt + (each_inventory['price_per_kg'] * each_inventory['weight_kg'])
             total_list_amt[inventory_cat] = total_amt
         return total_list_amt
 
