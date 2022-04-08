@@ -73,11 +73,28 @@ def create_inventory():
 
 
 def write_json(file_name, inventory_data):
+    """
+    Description:
+        Writes given Inventory Data in given File Name Json File.
+    Parameter:
+        file_name: given file name containing json file name where data is to be written.
+        inventory_data: given inventory data to be written in Json File.
+    Return:
+        None.
+    """
     with open(file_name, "w") as json_file:
         json.dump(inventory_data, json_file, indent=4, sort_keys=True)
 
 
 def read_json(file_name):
+    """
+    Description:
+        Reads Total Price * Weight of Each Ingredients in Inventory Data from given File Name in json format.
+    Parameter:
+        file_name: Given Json File Name from where Inventory Data is to be fetched.
+    Return:
+        Total Price * Weight of Each Ingredients in Inventory Data.
+    """
     with open(file_name) as json_file:
         inventory_data = json.load(json_file)
         inventory_list = ['Rice', 'Pulses', "Wheat"]
